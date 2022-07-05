@@ -25,11 +25,15 @@ def calcula_porcentagem_estado(faturamento_estado, total):
 
 
 if __name__ == '__main__':
+    titulo = "Programa que calcula o percentual de representação que cada estado teve dentro do valor total da distribuidora"
+    print(f"""{"-" * len(titulo)}""")
+    print(titulo)
+    print(f"""{"-" * len(titulo)}""")
     total = calcula_total_mensal(dados)
-    print(f"O valor total do faturamento mensal foi de R$ {total}")
+    print(f"\nO valor total do faturamento mensal foi de R$ {total}")
     for estado in dados.keys():
         representacao = calcula_porcentagem_estado(dados[estado], total)
         if estado != "OUTROS": 
             print(f"O fatumento do estado {estado} representou {representacao:.2f}%")
         else:
-            print(f"Outros estados representaram {representacao:.2f}%")
+            print(f"Outros estados representaram {representacao:.2f}%\n")

@@ -79,8 +79,12 @@ def calcula_numero_dias_mes_em_que_o_valor_faturamento_foi_superior_a_media_mens
 
 
 if __name__ == '__main__':
+    titulo = "Programa que calcula o menor e maior valor de faturamento mensal, além do número de dias em que o faturamento diário foi superior no mesmo mês"
+    print(f"""{"-" * len(titulo)}""")
+    print(titulo)
+    print(f"""{"-" * len(titulo)}""")
     dados_faturamento_brutos = leitura_json_dict("dados.json")
     dados_faturamento = filtra_dias_sem_faturamento(dados_faturamento_brutos)
-    print(f"O menor valor de faturamento ocorrido em um dia do mês foi: {calcula_menor_valor_faturamento(dados_faturamento)}")
+    print(f"\nO menor valor de faturamento ocorrido em um dia do mês foi: {calcula_menor_valor_faturamento(dados_faturamento)}")
     print(f"O maior valor de faturamento ocorrido em um dia do mês foi: {calcula_maior_valor_faturamento(dados_faturamento)}")
-    print(f"O número de dias no mês em que o valor de faturamento diário foi superior a media mensal foi: {calcula_numero_dias_mes_em_que_o_valor_faturamento_foi_superior_a_media_mensal(dados_faturamento)}")
+    print(f"O número de dias no mês em que o valor de faturamento diário foi superior a media mensal foi: {calcula_numero_dias_mes_em_que_o_valor_faturamento_foi_superior_a_media_mensal(dados_faturamento)}\n")
